@@ -1,0 +1,127 @@
+._testimonials {
+	.border-title {
+        color: $white;
+        overflow: hidden;
+
+        strong {
+            color: $horizonte-green;
+        }
+
+		&:before {
+        	@include media-breakpoint-up (lg) {
+                content: "";
+                position: absolute;
+                right: 0;
+				top: 45%;
+				width: 64%;
+                height: rem(2);
+                background-color: $horizonte-green;
+            }
+			@include media-breakpoint-up (xl) {
+				width: 73%;
+			}
+		}
+    }
+
+    .desc {
+        h3,h4 {
+            font-size: rem(45);
+            color: $horizonte-green;
+
+            @include media-breakpoint-up (xl) {
+                font-size: rem(50);
+                letter-spacing: rem(1);
+            }
+        }
+
+        p{
+            font-size: rem(18);
+            color: $white;
+            strong {
+                color: $horizonte-green;
+            }
+        }
+    }
+
+    .slide-testimonials {
+        .video {
+            video {
+                max-width: 100%;
+                background-color: #7e7e7e;
+            }
+            .play-video {
+                font-size: rem(60);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            @include media-breakpoint-up (lg) {
+                max-width: 366px;
+                box-shadow: 0 3px 17px 0 rgba(164, 164, 164, 0.16);
+            }
+        }
+
+        .image {
+            width: rem( 366 );
+            height: rem(190);
+            img{
+                object-fit: cover;
+            }
+        }
+
+        .box-description {
+            border-radius: 7px;
+
+            z-index: 2;
+
+            @include media-breakpoint-up (lg) {
+                max-width: rem(400);
+            }
+
+            .description{
+                font-style: italic;
+            }
+
+            .name,
+            .office {
+                line-height: 1.25;
+                color: #99afb9;
+            }
+        }
+
+        .pagination{
+            bottom: 0;
+
+            .swiper-pagination-bullet {
+                background-color: $white;
+                opacity: 1;
+                &.swiper-pagination-bullet-active {
+                    background-color: $primary;
+                }
+            }
+        }
+
+        .navigation {
+            .swiper-button-next,
+            .swiper-button-prev {
+                top: 70%;
+
+                &:after {
+                    font-family: 'Icons';
+                    content: "\eA03";
+                    font-size: rem(20);
+                    color: $primary;
+                }
+            }
+
+            .swiper-button-next{
+                transform: rotate(-90deg);
+            }
+            .swiper-button-prev{
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

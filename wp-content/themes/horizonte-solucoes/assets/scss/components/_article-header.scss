@@ -1,0 +1,19 @@
+._article-header {
+	margin-top: 100px;
+
+	._post-categories a {
+		color: $horizonte-red;
+		font-size: rem(16);
+	}
+
+	.excerpt {
+		line-height: 1.5;
+		font-size: rem(24);
+		color: #548394;
+	}
+
+	.date {
+		color: #6a92a1;
+		font-size: rem(12);
+	}
+}

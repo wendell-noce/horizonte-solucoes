@@ -1,0 +1,145 @@
+._form {
+    input,select,textarea{
+        width: 100%;
+        height: rem( 45 );
+        font-size: rem( 16 );
+        font-style: italic;
+        color: #B0B0B0;
+
+        padding: rem( 4 ) .75rem rem(7);
+
+        border: 2px solid $horizonte-navyblue;
+		border-radius: 8px;
+		transition: .3s all ease;
+		outline: none;
+
+		&:focus,
+		&:active,
+		&:hover {
+			border-color: $green;
+		}
+    }
+
+    textarea {
+        height: auto;
+        resize: none;
+    }
+    .custom_select {
+        position: relative;
+
+        &:before {
+            background-color: #4F4F4F;
+            width: 40px;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            pointer-events: none;
+
+            font-family: 'Emais Icons';
+            content: "\e805";
+            font-size: 12px;
+            color: #fff;
+            border-radius: 0 30px 30px 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: .3s all ease;
+        }
+
+        &:focus,
+        &:hover {
+            &:before {
+                background-color: $green;
+            }
+        }
+
+        select {
+            padding-left: 10px;
+            padding-right: 40px;
+
+            font-style: italic;
+            cursor: pointer;
+
+            border-radius: 50px;
+            outline: none;
+            background-color: #F1F3F6;
+        }
+    }
+
+    .custom_input {
+        input {
+
+        }
+
+        button {
+            border: none;
+            border-radius: 0 50px 50px 0px;
+            background-color: #4F4F4F;
+
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            width: 35px;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: .3s all ease;
+
+            &:focus,
+            &:hover {
+                background-color: $green;
+            }
+        }
+	}
+
+	.btn-send {
+		line-height: 1.2;
+		&:before {
+			content: "";
+			width: 0;
+			height: 100%;
+			background-color: $white;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: all .15s linear;
+			border-radius: 50px;
+			opacity: 0;
+		}
+
+		i,span{
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			z-index: 2;
+		}
+
+		i{
+			margin-left: 5px;
+		}
+
+		&:hover {
+			color: $horizonte-navyblue;
+			border-color: $white;
+
+			i{
+				margin-left: 10px;
+				transition: all .15s linear;
+			}
+			&:before {
+				width: 100%;
+				opacity: 1;
+			}
+		}
+	}
+
+}

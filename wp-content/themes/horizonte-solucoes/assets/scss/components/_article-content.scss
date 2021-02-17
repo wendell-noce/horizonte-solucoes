@@ -1,0 +1,66 @@
+._article-content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 1rem 0;
+	}
+
+	h1 {
+		@extend .h2;
+	}
+
+	h2 {
+		@extend .h3;
+	}
+
+	h3 {
+		@extend .h4;
+	}
+
+	h4 {
+		@extend .h5;
+	}
+
+	h5 {
+		@extend .h6;
+	}
+
+	.wp-block-quote {
+		@extend .h3;
+
+		&:before {
+			display: block;
+			content: "";
+			width: 30%;
+			height: 7px;
+			background: $primary;
+			margin-bottom: 1rem;
+		}
+	}
+
+	ul, ol {
+		li {
+			margin-bottom: 0.75rem;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: rem(18);
+
+		p, ul, ol, blockquote {
+			margin-bottom: 1.5rem;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 1.5rem 0;
+		}
+	}
+}

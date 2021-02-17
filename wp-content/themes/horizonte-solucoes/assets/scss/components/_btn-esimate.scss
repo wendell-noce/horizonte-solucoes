@@ -1,0 +1,58 @@
+.button-estimate {
+	background: $horizonte-blue;
+	border: 2px solid $horizonte-blue;
+	text-align: center;
+	transition: 0.25s all ease;
+
+	span {
+		font-size: rem( 12 );
+		display: inline-block;
+		min-width: 0.3em;
+		text-transform: uppercase;
+		transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2); 
+		opacity: 0;
+		transform: translate(0, -20px);
+		line-height: 1;
+	}
+
+	&:before {
+		content: attr(data-text);
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+
+		font-size: rem( 12 );
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 3.5px;
+
+		transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2);
+		opacity: 1;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #fff;
+
+		&:before {
+			opacity: 0;
+			transform: translate(0, 20px);
+		}
+
+		span {
+			opacity: 1;
+			transform: translate(0, 0);
+			color: $horizonte-blue;
+		}
+		$letters: 8;
+		@for $i from 1 through $letters {
+			span:nth-child(#{$i}) {
+				transition-delay: 0.025s * $i
+			}
+		}
+	}
+
+
+}

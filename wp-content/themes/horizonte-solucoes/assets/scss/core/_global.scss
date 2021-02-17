@@ -1,0 +1,70 @@
+/* BASIC GLOBAL CSS */
+
+// Font anti-aliasing
+* {
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+img, figure {
+    max-width: 100%;
+    height: auto;
+}
+
+img.lozad {
+	&:not(.lazy-loaded) {
+		background-color: rgba(0,0,0,.075);
+	}
+}
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+.wp-caption-text {
+    color: $medium;
+    @include font-size(14);
+    margin-top: 0.25rem;
+}
+
+picture {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// ::selection {
+// 	background: $medium;
+// 	color: white;
+// }
+
+// ::placeholder {
+// 	color: $medium;
+// }
+
+
+// Fit the footer at the bottom of the page if page height is not enough to fill the window
+#page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	#content {
+		position: relative;
+		flex: 100% 1 1;
+		overflow: hidden;
+	}
+
+	#footer {
+		margin-top: auto;
+	}
+}

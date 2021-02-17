@@ -1,0 +1,18 @@
+._clientes,
+._pareciros{
+    .client-box {
+        .name{
+            position: relative;
+            opacity: 0;
+            transform: translateY(-3px);
+            transition: all .3s ease;
+        }
+
+        &:hover {
+            .name {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}

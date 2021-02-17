@@ -1,0 +1,38 @@
+// Helper classes
+
+/* Links without underline hover */
+.undecorated-link {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/* Scroll */
+.scroll-locked {
+	height: 100%;
+    overflow: hidden;
+}
+
+.rounded {
+    border-radius: rem(50);
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.transition {
+    transition: all .3s linear;
+}
+
+.box-rounded {
+	border-radius: 10px;
+}
+
+.bg-gradient {
+	background: linear-gradient(to right,  rgba(44,83,158,1) 0%,rgba(255,255,255,0) 80%);
+}
+
+.container.big-container{
+    max-width: 1480px;
+}

@@ -1,0 +1,24 @@
+/* HOME STYLESHEET */
+
+// Swiper Components
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/components/pagination/pagination";
+@import "../../node_modules/swiper/components/navigation/navigation";
+
+// Essential modules and components
+@import './core/essentials';
+
+// Generic components
+@import './components/title-desc';
+@import './components/card-segment';
+@import './components/product-card';
+
+// Needed Components
+@import './components/hero';
+@import './components/cilentes';
+@import './components/concepts';
+@import './components/testimonials';
+
+
+// Page specific styles
+@import './pages/home';

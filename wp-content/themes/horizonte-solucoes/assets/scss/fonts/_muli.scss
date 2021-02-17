@@ -1,0 +1,107 @@
+/**
+ * Muli Font Family
+ * Create @font-face rules for the font family
+ */
+
+// Variables to reference the font files
+$family: 'Muli';
+$path: '../../fonts/muli/';
+$basename: 'Muli-';
+$extensions: (
+	woff2: '.woff2',
+	woff: '.woff',
+	truetype: '.ttf'
+);
+// Make sure all fonts are available in all extensions above!
+
+// Each variation of this Font Family
+// The properties below should match the name in the font files after the $basename
+$fonts: (
+	/* 'ExtraLight': (
+		weight: 200,
+		style: normal
+	),
+	'ExtraLightItalic': (
+		weight: 200,
+		style: italic
+	),
+	'Light': (
+		weight: 300,
+		style: normal
+	),
+	'LightItalic': (
+		weight: 300,
+		style: italic
+	), */
+	'Regular': (
+		weight: 400,
+		style: normal
+	),
+	'Italic': (
+		weight: 400,
+		style: italic
+	),
+	/* 'Medium': (
+		weight: 500,
+		style: normal
+	),
+	'MediumItalic': (
+		weight: 500,
+		style: italic
+	),
+	'SemiBold': (
+		weight: 600,
+		style: normal
+	),
+	'SemiBoldItalic': (
+		weight: 600,
+		style: italic
+	), */
+	'Bold': (
+		weight: 700,
+		style: normal
+	),
+	'BoldItalic': (
+		weight: 700,
+		style: italic
+	),
+	'ExtraBold': (
+		weight: 800,
+		style: normal
+	),
+	'ExtraBoldItalic': (
+		weight: 800,
+		style: italic
+	)
+	/* 'Black': (
+		weight: 900,
+		style: normal
+	)
+	'BlackItalic': (
+		weight: 900,
+		style: italic
+	) */
+);
+
+// Function that returns all paths to a font variation
+@function font-urls($variation, $formats) {
+	$urls: null;
+	@each $format, $extension in $extensions {
+		$urls: append($urls, url($path + $format + '/' + $basename + $variation + $extension) format('#{$format}'), comma);
+	}
+	@return $urls;
+}
+
+// Create a @font-face each font variation in the $fonts list
+@each $font, $properties in $fonts {
+	$font-weight: map-get($properties, weight);
+	$font-style: map-get($properties, style);
+
+	@font-face {
+		font-family: $family;
+		src: font-urls($font, $extensions);
+		font-weight: $font-weight;
+		font-style: $font-style;
+		font-display: swap;
+	}
+}

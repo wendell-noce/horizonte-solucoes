@@ -1,0 +1,10 @@
+._title-with-border {
+	&:after {
+		display: block;
+		content: "";
+		width: 50%;
+		height: 5px;
+		background: #dc6964;
+		margin: 1.5rem auto;
+	}
+}

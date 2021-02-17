@@ -1,0 +1,42 @@
+._floating-cta {
+	display: none;
+	right: rem( 80 );
+	bottom: rem( 40 );
+	z-index: $zindex-fixed;
+
+	.btn {
+		line-height: 1;
+		opacity: 0;
+		transition: $btn-transition, opacity 0.2s ease-in-out;
+		background-color: #00e513;
+		border-radius: 50px;
+		color: $white;
+		i{
+			font-size: rem( 25 );
+		}
+	}
+
+	span {
+		opacity: 0;
+		top: 0;
+		left: 0;
+		text-align: center;
+		width: 210px;
+		transform: translateX(-40%);
+	}
+
+	&.is-shown {
+		display: block;
+
+		.btn {
+			opacity: 1;
+		}
+
+		&:hover {
+			span {
+				opacity: 1;
+				top: -60px;
+			}
+		}
+	}
+}

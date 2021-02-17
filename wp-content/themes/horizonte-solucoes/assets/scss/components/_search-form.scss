@@ -1,0 +1,50 @@
+._search-form {
+	border-radius: 8px;
+	border: solid 1px #c6d5db;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: border 0.25s ease-in-out;
+
+	.input {
+		width: 100%;
+		border: none;
+		outline: none;
+
+		&:active,
+		&:focus {
+			outline: none;
+		}
+
+		&::-webkit-input-placeholder,
+		&:-ms-input-placeholder,
+		&::placeholder {
+			color: $text-muted;
+		}
+	}
+
+	.submit {
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		i {
+			transition: color 0.25s ease-in-out;
+			color: #7098a6;
+			font-size: rem(20);
+		}
+	}
+
+	&:focus-within {
+		border-color: $horizonte-blue;
+
+		.submit i {
+			color: $horizonte-blue;
+		}
+	}
+}

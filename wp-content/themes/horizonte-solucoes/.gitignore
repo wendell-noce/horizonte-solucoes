@@ -1,0 +1,14 @@
+# Machine and cache files
+*.DS_Store
+
+# SASS generated cache
+.sass-cache/
+
+# Visual Code Workspace Config
+*.code-workspace
+
+# CSS Sourcemaps
+*.css.map
+
+# Dependendies from NPM
+/node_modules

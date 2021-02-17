@@ -1,0 +1,135 @@
+._footer {
+	border-top: 2px solid $horizonte-navyblue;
+
+    a, p, span {
+        color: $horizonte-navyblue;
+	}
+
+	a {
+		&:hover {
+			color: $secondary;
+		}
+	}
+
+    .box-logo {
+        p{
+            font-size: rem(16);
+        }
+    }
+
+    .footer-menu {
+        li {
+            margin-bottom: rem(8);
+
+			a {
+				transition: .05s linear;
+
+				&:hover,
+				&:active {
+					color: $secundary;
+					text-decoration: none;
+
+					span {
+						color: $secundary;
+					}
+				}
+			}
+        }
+    }
+
+    .social-media {
+        li {
+            position: relative;
+            width: rem(35);
+            height: rem(35);
+
+            display: inline-block;
+            margin-right: 10px;
+
+            border-radius: rem(50);
+
+            &:before {
+                font-size: rem(20);
+                color: $white;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+                transition: all .3s ease;
+                z-index: 1;
+            }
+
+            a {
+                font-size: rem(23); 
+                height: 100%;
+                color:$horizonte-navyblue;
+
+                transition: all .3s ease;
+                text-indent: -9999999px;
+                display: block;
+                position: relative;
+                z-index: 3;
+
+            }
+
+            transition: all .3s ease;
+
+            &.icon-facebook { background-color: $horizonte-navyblue; }
+            &.icon-instagram{ background-color: $horizonte-navyblue;}
+            &.icon-twitter { background-color: $horizonte-navyblue;}
+            &.icon-linkedin { background-color: $horizonte-navyblue;}
+            &.icon-whatsapp { background-color: $horizonte-navyblue;}
+            &.icon-youtube { background-color: $horizonte-navyblue;}
+        }
+    }
+
+    .footer-block {
+        h3,.h3 {
+            font-size: rem(19);
+            color: $horizonte-navyblue;
+        }
+
+        a {
+            i,span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        p {
+            font-size: rem(14);
+        }
+
+        .icon {
+            font-size: rem(20);
+            color: $secundary;
+        }
+    }
+
+    .registration-text,
+    .copyright {
+        p {
+			font-size: rem(12);
+			margin-bottom: 0;
+        }
+    }
+
+    .copyright {
+        a {
+			font-size: rem(72);
+			transition: color .2s linear;
+			line-height: 1;
+
+			&:hover {
+				color: $white;
+			}
+
+            @include media-breakpoint-up (lg) {
+                font-size: rem(50);
+                transform: translateY( 25% );
+            }
+        }
+    }
+}

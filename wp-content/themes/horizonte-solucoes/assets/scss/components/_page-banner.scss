@@ -1,0 +1,16 @@
+._page-banner {
+	height: rem( 100 );
+	margin-top: rem( 60 );
+    @include media-breakpoint-up (md) {
+		height: rem( 150 );
+	}
+
+	@include media-breakpoint-up (lg) {
+		height: rem( 200 );
+		margin-top: rem( 70 );
+	}
+
+	@include media-breakpoint-up (xl) {
+		height: rem( 230 );
+    }
+}

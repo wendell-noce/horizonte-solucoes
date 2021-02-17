@@ -1,0 +1,58 @@
+$top-bar: 51px;
+
+._header {
+	background-color: #fff;
+
+	position: fixed;
+	@include media-breakpoint-up (lg) {
+		top: $top-bar;
+	}
+
+	z-index: 5;
+	transition: all 0.3s easing(easeOutCubic);
+
+	&.active {
+		background-color: $white;
+		top: 0 !important;
+	}
+}
+
+.logged-in.admin-bar {
+	._header {
+		top: $admin-bar-mobile-height;
+
+		@include media-breakpoint-up(lg) {
+			top: calc(#{$admin-bar-desktop-height} + #{$top-bar});
+		}
+	}
+}
+.site-logo {
+	height: auto;
+	background-color: $white;
+	position: absolute;
+	top: 0;
+	line-height: 0.7;
+	z-index: 6;
+	border-radius: 0 0 5px 5px;
+
+	.text-1{
+		font-size: rem(20);
+	}
+	.text-2{
+		font-size: rem(20);
+		font-weight: 700;
+		color: #454545;
+	}
+}
+
+._footer {
+	.site-logo {
+		.text-1 {
+			top: 6px;
+		}
+		.text-2 {
+			bottom: 4px;
+			color: $white;
+		}
+	}
+}

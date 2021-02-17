@@ -1,0 +1,11 @@
+._title-desc {
+    .desc {
+        p{
+            font-size: rem(18);
+
+            @include media-breakpoint-up (lg) {
+                font-size: rem(24);
+            }
+        }
+    }
+}

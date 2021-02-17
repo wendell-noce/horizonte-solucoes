@@ -1,0 +1,21 @@
+._categories-widget {
+	.title {
+		font-weight: 800;
+	}
+
+	.categories {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin-bottom: 1rem;
+
+			a {
+				color: $horizonte-red;
+				font-weight: 700;
+				font-size: rem(18);
+			}
+		}
+	}
+}

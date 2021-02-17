@@ -1,0 +1,21 @@
+._concepts {
+    .concept-card {
+        border-radius: 10px;
+        box-shadow: 0 3px 20px 0 rgba(0, 74, 93, 0.16);
+        background-color: #ffffff;
+
+        @include media-breakpoint-up (lg) {
+            height: 100%;
+        }
+
+        .card-title {
+            font-size: rem(23);
+            font-weight: 100;
+            color: $horizonte-darkblue;
+
+            strong{
+                font-weight: 700;
+            }
+        }
+    }
+}

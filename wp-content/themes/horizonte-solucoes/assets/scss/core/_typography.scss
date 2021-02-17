@@ -1,0 +1,37 @@
+/**
+ * Typography definition
+ * These configurations take in consideration what is set in the _variables.scss file
+ */
+
+.font-devil {
+	font-family: 'Devil Breeze';
+}
+.font-beon {
+	font-family: 'Beon';
+}
+
+h1, .h1,
+h2, .h2 {
+	font-weight: 800;
+}
+
+@include media-breakpoint-up(md) {
+	h1, .h1 {
+		font-size: rem(67); // 37px on mobile
+	}
+	h2, .h2 {
+		font-size: rem(50); // 28px on mobile
+	}
+	h3, .h3 {
+		font-size: rem(37); // 24px on mobile
+	}
+	h4, .h4 {
+		// Same as mobile - 21px
+	}
+	h5, .h5 {
+		// Same as mobile - 19px
+	}
+	h6, .h6 {
+		// Same as mobile - 16px
+	}
+}
